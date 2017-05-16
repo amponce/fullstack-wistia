@@ -33,9 +33,8 @@ class PeopleController < ApplicationController
   def sort_direction
     %w[asc desc].include?(person_params[:direction]) ? person_params[:direction] : "asc"
   end
-  # Use callbacks to share common setup or constraints between actions.
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # allow the white list.
   def person_params
     params.permit(:lastname, :firstname, :middle, :pet, :birthday, :color)
   end
