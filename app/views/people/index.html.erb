@@ -3,8 +3,9 @@
     <p class="float-left people_number"><%= Person.count %> People</p>
     <div class="people-import">
       <%= form_tag import_people_path, multipart: true do %>
-          <%= file_field_tag :file, id: "choose-file", class: " btn btn-secondary btn-file" %>
-          <%= submit_tag "Browse", id: "import-submit", class: "btn btn-info" %>
+        <p class="float-left">Import a file</p>
+        <%= file_field_tag :file, id: "choose-file", class: " btn btn-secondary btn-file" %>
+        <%= submit_tag "Browse", id: "import-submit", class: "btn btn-info" %>
       <% end %>
     </div>
   </div>
