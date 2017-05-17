@@ -5,8 +5,8 @@
 #  id         :integer          not null, primary key
 #  lastname   :string
 #  firstname  :string
-#  middle     :string
-#  pet        :string
+#  middle     :string           default("None")
+#  pet        :string           default("None")
 #  birthday   :string
 #  color      :string
 #  created_at :datetime         not null

@@ -31,6 +31,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 #Add a comment summarizing the current schema to the top or bottom
 gem 'annotate'
 
+#used for test or construct data
+gem 'factory_girl_rails'
+
 # Bootstrap tooltips and popovers depend on http://tether.io/ for positioning.
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
