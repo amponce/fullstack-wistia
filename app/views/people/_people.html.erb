@@ -14,22 +14,18 @@
 		</tr>
 	</thead>
 
-	<% index = 0 %>
-	<% @people.each do |people| %>
-	<% index += 1 %>
-
-	<tbody>
-		<tr>
-			<!-- <th scope="row"><%= index %></th> -->
-			<td><%= people.lastname %></td>
-			<td><%= people.firstname %></td>
-			<td><%= people.middle %></td>
-			<td><%= people.pet %></td>
-			<td><%= people.birthday %></td>
-      <td><%= people.color %></td>
-		</tr>
-	</tbody>
-	<% end %>
+  <tbody>
+    <% @people.each do |people| %>
+      <tr>
+        <td><%= people.lastname %></td>
+        <td><%= people.firstname %></td>
+        <td><%= people.middle %></td>
+        <td><%= people.pet %></td>
+        <td><%= people.birthday %></td>
+        <td><%= people.color %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <%= will_paginate @people %>

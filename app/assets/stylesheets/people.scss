@@ -5,23 +5,36 @@ body {
   .wistia{
     width: 60%;
     margin:0 auto;
+    .import-container {
+      margin: 75px 0 35px 0;
+      height: 45px;
+      .people_number {
+        font-size: 26px;
+        color: #363945;
+        line-height: 45px;
+        height: 45px;
+      }
+    }
     .people-import {
       float: right;
-      margin: 75px 0 35px 0;
-    .btn-secondary {
-      color: #292b2c;
-      border-color: #ccc;
-      width: 450px;
-      border-radius: 5px 0px 0px 5px;
-      padding: 8px
-    }
-    .btn-info {
-      border-radius: 0px 5px 5px 0px;
-      border-color: #ccc;
-      width:110px;
-      border-width: 1.5px;
-      margin: 0 0 0 -6px;
-      padding: 10px;
+      .btn-secondary {
+        height: 45px;
+        font-size: 13px;
+        color: #292b2c;
+        border-color: #ccc;
+        width: 450px;
+        border-radius: 5px 0px 0px 5px;
+        padding: 8px
+      }
+      .btn-info {
+        height: 45px;
+        width:110px;
+        border-width: 1.5px;
+        margin: 0 0 0 -6px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 4px;
+        background-color: #54bbff;
       }
     }
     .table thead th {
@@ -33,7 +46,7 @@ body {
     .table thead th a {
       color:#a7a9ac;
       &.current {
-        color: #5fbbff;
+        color: #54bbff;
         font-weight:bold;
       }
     }
@@ -42,10 +55,11 @@ body {
       font-size: 15px;
       font-weight: normal;
       color:#363945;
+      height: 50px;
     }
     .pagination {
       span, em, a {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
       }
     }
   }
