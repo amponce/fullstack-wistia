@@ -21,11 +21,11 @@
         <td><%= people.firstname %></td>
         <td><%= people.middle %></td>
         <td class="pet-td">
-          <% if people.pet.downcase == 'cat' %>
+          <% if ['cat', 'c'].include?(people.pet.downcase) %>
             <%= image_tag "cat.png" %>
-          <% elsif people.pet.downcase == 'dog' %>
+          <% elsif ['dog', 'd'].include?(people.pet.downcase) %>
             <%= image_tag "dog.png" %>
-          <% elsif people.pet.downcase == 'both' %>
+          <% elsif ['both', 'b'].include?(people.pet.downcase) %>
             <%= image_tag "both.png" %>
           <% end %>
           <%= people.pet %>
