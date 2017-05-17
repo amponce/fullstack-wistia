@@ -1,24 +1,12 @@
 <div class="row">
-  <div class="col-sm-12 col-md-8">
-    <div class="person-import">
+  <div class="col-sm-12 col-md-12">
+    <div class="people-import">
       <!-- <h3>Upload and Import CSV Data</h3> -->
       <%= form_tag import_people_path, multipart: true do %>
-          <%= file_field_tag :file, id: "choose-file", class: "btn btn-secondary btn-file" %>
-          <%= submit_tag "Import CSV", id: "import-submit", class: "btn btn-success" %>
+          <%= file_field_tag :file, id: "choose-file", class: " btn btn-secondary btn-file" %>
+          <%= submit_tag "Browse", id: "import-submit", class: "btn btn-info" %>
       <% end %>
     </div>
-  </div>
-  <div class="col-sm-12 col-md-4">
-    <!-- <div class="person-search">
-      <%# content_for :title, "Person" %>
-      <h3>Search</h3>
-      <%= form_tag people_path, method: 'get', id: "person_search", class: "form-inline pull-xs-right" do %>
-        <p>
-          <%= text_field_tag :search, params[:search], placeholder: "", id: "search-input", class: "form-control" %>
-          <%= submit_tag "Search", lastname: nil, id: "search-submit", class: "btn btn-success" %>
-        </p>
-      <% end %>
-    </div> -->
   </div>
 </div>
 <div class="row">

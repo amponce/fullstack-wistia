@@ -1,18 +1,17 @@
 <%= hidden_field_tag :direction, params[:direction] %>
 <%= hidden_field_tag :sort, params[:sort] %>
 
-<table class="table table-sm table-bordered table-hover table-responsive pretty">
-	<thead class="thead-default">
+<table class="table table-hover">
+	<thead>
 		<tr>
 			<!-- <th>#</th> -->
 			<th><%= sortable "lastname", "Last name" %></th>
-			<th><%= sortable "firstname", "First name" %></th>
-			<th><%= sortable "middle", "Middle Initial" %></th>
-			<th><%= sortable "pet", "Pet" %></th>
-			<th><%= sortable "birthday", "Birthday" %></th>
-			<th><%= sortable "color", "Favorite Color" %></th>
+			<th><%= "First name" %></th>
+			<th><%= "Middle Initial" %></th>
+			<th><%= "Pet" %></th>
+			<th><%= "Birthday" %></th>
+			<th><%= "Favorite Color" %></th>
 		</tr>
-
 	</thead>
 
 	<% index = 0 %>
@@ -22,12 +21,12 @@
 	<tbody>
 		<tr>
 			<!-- <th scope="row"><%= index %></th> -->
-			<td class="text-primary"><%= people.lastname %></td>
-			<td class="text-primary"><%= people.firstname %></td>
-			<td class="text-primary"><%= people.middle %></td>
-			<td class="text-primary"><%= people.pet %></td>
-			<td class="text-primary"><%= people.birthday %></td>
-      <td class="text-primary"><%= people.color %></td>
+			<td><%= people.lastname %></td>
+			<td><%= people.firstname %></td>
+			<td><%= people.middle %></td>
+			<td><%= people.pet %></td>
+			<td><%= people.birthday %></td>
+      <td><%= people.color %></td>
 		</tr>
 	</tbody>
 	<% end %>

@@ -2,77 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background-color: #fff;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
-
-  #container {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #FFF;
-    padding: 20px 40px;
-    margin-top: 20px;
-
-    .person-import {
-      padding-bottom: 75px;
-
-      #choose-file {
-        width: 50%;
+  .wistia{
+    width: 60%;
+    margin:0 auto;
+    .people-import {
+      float: right;
+      margin: 75px 0 35px 0;
+    .btn-secondary {
+      color: #292b2c;
+      background-color: #fff;
+      border-color: #ccc;
+      width: 450px;
+      border-radius: 5px 0px 0px 5px;
+      padding: 8px
+    }
+    .btn-info {
+      border-radius: 0px 5px 5px 0px;
+      border-color: #ccc;
+      width:110px;
+      border-width: 1.5px;
+      margin: 0 0 0 -6px;
+      padding: 10px;
       }
     }
-
-    .person-search {
-      padding-bottom: 10px;
-
-      #search-input {
-        width: 100%;
-      }
-
-      #search-submit {
-        display: inline-flex;
-        width: 100%;
-      }
+    .current {
+      color: #5fbbff;
+      font-weight:bold;
     }
-
-    .person-list {
-      .pagination > * {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-
-      #person {
-        .pretty {
-          text-align: left;
-        }
-
-        .pretty th .current {
-          padding-right: 12px;
-          background-repeat: no-repeat;
-          background-position: right center;
-        }
-
-        .pretty th .asc {
-          background-image: asset-data-url("up_arrow_inverse.gif");
-        }
-
-        .pretty th .desc {
-          background-image: asset-data-url("down_arrow_inverse.gif");
-        }
-      }
+    .table thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #e6e7e8;
+      color:#a7a9ac;
+      font-weight: normal;
+    }
+    .table th, .table td {
+      border-top: 1px solid #e6e7e8;
+      font-size: 15px;
+      font-weight: normal;
+      color:#363945;
     }
   }
-}
-
-a img {
-  border: none;
-}
-
-a {
-  color: #0000FF;
-}
-
-.clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
 }
