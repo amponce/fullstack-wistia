@@ -20,7 +20,16 @@
         <td><%= people.lastname %></td>
         <td><%= people.firstname %></td>
         <td><%= people.middle %></td>
-        <td><%= people.pet %></td>
+        <td class="pet-td">
+          <% if people.pet.downcase == 'cat' %>
+            <%= image_tag "cat.png" %>
+          <% elsif people.pet.downcase == 'dog' %>
+            <%= image_tag "cat.png" %>
+          <% elsif people.pet.downcase == 'both' %>
+            <%= image_tag "both.png" %>
+          <% end %>
+          <%= people.pet %>
+        </td>
         <td><%= people.birthday %></td>
         <td><%= people.color %></td>
       </tr>

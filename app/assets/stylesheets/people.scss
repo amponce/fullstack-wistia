@@ -57,6 +57,17 @@ body {
       color:#363945;
       height: 50px;
     }
+    .table {
+      td {
+        vertical-align: middle;
+        &.pet-td {
+          img {
+            height: 35px;
+            width: 35px;
+          }
+        }
+      }
+    }
     .pagination {
       span, em, a {
         margin-right: 0.5rem;
