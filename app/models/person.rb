@@ -42,14 +42,6 @@ class Person < ActiveRecord::Base
         end
       end
     end
-
-    def search(key)
-      if key
-        where('lastname LIKE ?', "%#{key}%")
-      else
-        where(nil)
-      end
-    end
   end
 
 end

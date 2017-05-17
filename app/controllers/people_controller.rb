@@ -7,16 +7,12 @@ class PeopleController < ApplicationController
   def index
 
     @people = Person.all
-                     .search(params[:search])
                      .order(sort_column + " " + sort_direction)
                      .paginate(:per_page => 5, :page => params[:page])
   end
 
   def import
-    # Validate inputs with block
-    file = params[:file]
-    file_path = file.path
-    Person.import(file_path)
+    Person.import(params[:file].path)
     redirect_to root_url, notice: "Person imported."
   end
 
