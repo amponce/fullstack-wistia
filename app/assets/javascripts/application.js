@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('ready page:load', function () {
+
+  $('#people-upload').submit(function(){
+    var val = $("#choose-file").val();
+    if(val == ''){
+      $('#choose-file').click();
+      return false;
+    }
+  });
+
+});
