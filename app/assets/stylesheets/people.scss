@@ -24,21 +24,29 @@ body {
       padding: 10px;
       }
     }
-    .current {
-      color: #5fbbff;
-      font-weight:bold;
-    }
     .table thead th {
       vertical-align: bottom;
       border-bottom: 2px solid #e6e7e8;
       color:#a7a9ac;
       font-weight: normal;
     }
+    .table thead th a {
+      color:#a7a9ac;
+      &.current {
+        color: #5fbbff;
+        font-weight:bold;
+      }
+    }
     .table th, .table td {
       border-top: 1px solid #e6e7e8;
       font-size: 15px;
       font-weight: normal;
       color:#363945;
+    }
+    .pagination {
+      span, em, a {
+        margin-right: 1rem;
+      }
     }
   }
 }
