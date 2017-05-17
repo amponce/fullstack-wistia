@@ -28,6 +28,9 @@ gem 'jquery-ui-rails', '~> 6.0.1'
 # Use Bootstrap 4
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
+#Add a comment summarizing the current schema to the top or bottom
+gem 'annotate'
+
 # Bootstrap tooltips and popovers depend on http://tether.io/ for positioning.
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
@@ -49,6 +52,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-byebug'
+  gem 'pry'
   gem 'rspec-rails', '~> 3.5.2'
   gem 'rails-controller-testing', '~> 1.0.1'
 end

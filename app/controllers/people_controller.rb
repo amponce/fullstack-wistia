@@ -14,14 +14,10 @@ class PeopleController < ApplicationController
 
   def import
     # Validate inputs with block
-    begin
-      file = person_params[:file]
-      file_path = file.path
-      Person.import(file_path)
-      redirect_to root_url, notice: "Person imported."
-    rescue
-      redirect_to root_url, notice: "Invalid CSV file format."
-    end
+    file = params[:file]
+    file_path = file.path
+    Person.import(file_path)
+    redirect_to root_url, notice: "Person imported."
   end
 
   private
