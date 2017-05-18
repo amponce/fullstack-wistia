@@ -17,7 +17,7 @@ require 'rails_helper'
 
 RSpec.describe Person, type: :model do
 
-  it "test import" do
+  it "import a CSV File" do
     file_path = Rails.root.join('spec', 'fixtures', 'import_data.txt')
     expect(Person.count).to eq(0)
     Person.import(file_path)

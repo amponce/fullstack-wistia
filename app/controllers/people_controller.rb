@@ -25,9 +25,4 @@ class PeopleController < ApplicationController
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
-
-  # allow the white list.
-  def person_params
-    params.permit(:lastname, :firstname, :middle, :pet, :birthday, :color)
-  end
 end
