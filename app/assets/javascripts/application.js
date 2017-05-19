@@ -15,14 +15,15 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('ready page:load', function () {
 
-  $('#people-upload').submit(function(){
-    var val = $("#choose-file").val();
-    if(val == ''){
-      $('#choose-file').click();
-      return false;
-    }
-  });
-
+$(document).ready(
+function(){
+$('input:submit').hide();
+    $('input:file').change(
+      function(){
+        if ($(this).val()) {
+        $('input:submit').show();
+        }
+      }
+   );
 });

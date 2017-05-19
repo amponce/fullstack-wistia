@@ -4,8 +4,11 @@
     <div class="people-import">
       <%= form_tag import_people_path, id: 'people-upload', multipart: true do %>
         <p class="hidden-md-down float-left">Import a file</p>
-        <%= file_field_tag :file, id: "choose-file", class: " btn btn-secondary btn-file" %>
-        <%= submit_tag "Browse", id: "import-submit", class: "btn btn-info" %>
+         <label class="file">
+          <%= file_field_tag :file, id: "choose-file" %>
+        </label>
+          <input type="submit" name="commit" value="Import" data-disable-with="Import file" class="btn btn-success">
+        </input>
       <% end %>
     </div>
   </div>
