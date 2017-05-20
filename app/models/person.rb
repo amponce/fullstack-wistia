@@ -18,6 +18,7 @@ class Person < ActiveRecord::Base
   class << self
     def import(file_path)
       File.foreach(file_path) do |line|
+
         if line.include?(',')
           columns = line.split(',')
           if columns.count == 5
@@ -43,5 +44,4 @@ class Person < ActiveRecord::Base
       end
     end
   end
-
 end

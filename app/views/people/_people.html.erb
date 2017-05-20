@@ -1,6 +1,5 @@
 <%= hidden_field_tag :direction, params[:direction] %>
 <%= hidden_field_tag :sort, params[:sort] %>
-
 <table class="table table-hover">
 	<thead>
 		<tr>
@@ -16,6 +15,7 @@
 
   <tbody>
     <% @people.each do |people| %>
+
       <tr>
         <td><%= people.lastname %></td>
         <td><%= people.firstname %></td>
@@ -23,14 +23,21 @@
         <td class="pet-td">
           <% if ['cat', 'c'].include?(people.pet.downcase) %>
             <%= image_tag "cat.png" %>
+						<%= content_tag(:span, "Cat", class: 'cat', id: 'cat') %>
           <% elsif ['dog', 'd'].include?(people.pet.downcase) %>
             <%= image_tag "dog.png" %>
+						<%= content_tag(:span, "Dog", class: 'dog', id: 'dog') %>
           <% elsif ['both', 'b'].include?(people.pet.downcase) %>
             <%= image_tag "both.png" %>
+						<%= content_tag(:span, "Both", class: 'both', id: 'both') %>
+					<% elsif ['none', 'n'].include?(people.pet.downcase) %>
+							<%= content_tag(:span, "None", class: 'none', id: 'none') %>
+					<% else %>
+							 <%= people.pet %>
           <% end %>
-          <%= people.pet %>
+
         </td>
-        <td><%= people.birthday %></td>
+        <td class="date"><%= people.birthday%></td>
         <td><%= people.color %></td>
       </tr>
     <% end %>

@@ -11,19 +11,20 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jquery.turbolinks
+//= require jquery-ui/widgets/datepicker
 //= require turbolinks
 //= require_tree .
 
 
-$(document).ready(
-function(){
-$('input:submit').hide();
-    $('input:file').change(
-      function(){
-        if ($(this).val()) {
-        $('input:submit').show();
-        }
-      }
-   );
-});
+$(document).on('turbolinks:load', function() {
+   $("input[name='file']").change(function(){
+      this.form.submit();
+  });
+  $('td.date').each(function(event) {
+      var dateFormat = $(this).text()
+      var dateFormat = $.datepicker.formatDate('mm/dd/yy', new Date(dateFormat));
+      //alert(dateFormat);
+      $(this).html(dateFormat + "<br>");
+    });
+  });

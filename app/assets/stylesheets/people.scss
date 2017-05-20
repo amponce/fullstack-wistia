@@ -1,16 +1,11 @@
 // Place all the styles related to the People controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap/custom-forms";
-
 
 
 body {
 
   .wistia{
-    a{
-      color: #54bbff;
-    }
     margin:0 auto;
     .import-container {
       margin: 75px 0 35px 0;
@@ -31,81 +26,76 @@ body {
         line-height: 45px;
         color: #a7a9ac;
       }
-
-
           /* The actual hack: */
-
           /* Label container: */
           .file {
-              display: inline-block;
-              padding: 0 0 0 0.5em;
-              cursor: pointer;
-              position: relative;
+            display: inline-block;
+            padding: 0 0 0 0.5em;
+            cursor: pointer;
+            position: relative;
 
           }
 
           /* The pseudo input field: */
           .file::before {
-              content: "";
-              display: block;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 0;
-              bottom: 0;
-              z-index: -1;
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
 
-              /* Bootstrap appearance: */
-              background-color: #fff;
-              border: .075rem solid #ddd;
-              border-radius: .25rem;
-              -webkit-box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
-              box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+            /* Bootstrap appearance: */
+            background-color: #fff;
+            border: .075rem solid #ddd;
+            border-radius: .25rem;
+            -webkit-box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+            box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
           }
 
           /* The pseudo button: */
           .file::after {
-              content: "Browse";
-              display: inline-block;
+            content: "Browse";
+            display: inline-block;
 
-              /* Bootstrap appearance: */
-              background-color: #54bbff;
-              border: .075rem solid #ddd;
-              border-radius: 0 .25rem .25rem 0;
-              padding: .5rem 1rem;
-              line-height: 1.5;
-              color: #fff;
+            /* Bootstrap appearance: */
+            background-color: #54bbff;
+            border: .075rem solid #ddd;
+            border-radius: 0 .25rem .25rem 0;
+            padding: .5rem 1rem;
+            line-height: 1.5;
+            color: #fff;
           }
 
-
-
           .file input[type=file] {
-              cursor: pointer;
-              border: 0 none;
-              width: 12em;
+            cursor: pointer;
+            border: 0 none;
+            width: 20em;
           }
 
           /* -webkit hide the button: */
           .file input[type=file]::-webkit-file-upload-button {
-              border: 0;
-              padding: 0;
-              margin: 0 ;
-              width: 0;
-              background: transparent;
+            border: 0;
+            padding: 0;
+            margin: 0 ;
+            width: 0;
+            background: transparent;
           }
 
           /* IE10+ hide the button: */
           .file input[type=file]::-ms-browse {
-              padding: 0;
-              margin: -1px;
-              width: 0;
-              border: 0;
-              background: transparent;
+            padding: 0;
+            margin: -1px;
+            width: 0;
+            border: 0;
+            background: transparent;
           }
 
           .file input[type=file]::-ms-value {
-              background: #fff;
-              border: 0;
+            background: #fff;
+            border: 0;
           }
 
           /* Firefox hide the button: */
@@ -113,14 +103,14 @@ body {
 
               /* Hide the overflow: */
               .file {
-                  overflow: hidden;
+                overflow: hidden;
               }
 
               /* Shift right: */
               .file input[type=file] {
-                  margin-left: -6.3em;
-                  /* Compensate the width: */
-                  width: 18.3em;
+                margin-left: -6.3em;
+                /* Compensate the width: */
+                width: 18.3em;
               }
           }
 
@@ -133,7 +123,7 @@ body {
                   causes problems with the drop shadow so could maybe fix that instead.)
               */
               .file::after {
-                  padding: .5rem 1.1rem;
+                padding: .5rem 1.1rem;
               }
 
               /*
@@ -141,10 +131,10 @@ body {
                   (Note it doesn't seem to want to be transparent so this would need to be theme-able)
               */
               .file input[type=file] {
-                  background: #fff;
-                  margin-right: -6.6em;
-                  /* Compensate the width: */
-                  width: 18.6em;
+                background: #fff;
+                margin-right: -6.6em;
+                /* Compensate the width: */
+                width: 18.6em;
               }
           }
           .btn-success {
@@ -159,7 +149,8 @@ body {
       font-weight: normal;
     }
     .table thead th a {
-      color:#a7a9ac;
+        text-decoration:none;
+        color:#a7a9ac;
       &.current {
         color: #54bbff;
         font-weight:bold;
@@ -184,7 +175,11 @@ body {
     .table {
       td {
         vertical-align: middle;
-        &.pet-td {
+         &.pet-td {
+           span.none{
+             color:#a7a9ac;
+             font-style:italic;
+           }
           img {
             height: 35px;
             width: 35px;
@@ -195,6 +190,7 @@ body {
     .pagination {
       span, em, a {
         margin-right: 0.5rem;
+        color:#54bbff;
       }
     }
   }

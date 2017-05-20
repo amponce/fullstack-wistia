@@ -17,7 +17,7 @@ require 'rails_helper'
 
 RSpec.describe Person, type: :model do
 
-  it "import a CSV File" do
+  it "import space pipe and comma file" do
     file_path = Rails.root.join('spec', 'fixtures', 'import_data.txt')
     expect(Person.count).to eq(0)
     Person.import(file_path)

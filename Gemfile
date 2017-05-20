@@ -25,7 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '~> 6.0.1'
-
+gem 'jquery-turbolinks'
 # Use Bootstrap 4
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
