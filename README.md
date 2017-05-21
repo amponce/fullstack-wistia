@@ -56,7 +56,7 @@ Origianlly I started down a different path by trying to import only CSV files. H
 There are few outstanding items that I would have liked to address:
 
 * Resolve mobile issues, it's currently best viewed at desktop (currently there is a date-related display issue on iOS)
-* Add error message to indicate when a user has uploaded a duplicate file
+* Add error message to indicate when a user has uploaded a duplicate file 
 * Add test to upload a duplicate file and expect an error message
 * Add error message to indicate an invalid file
 * Add test for invalid file that expects the designated error message
