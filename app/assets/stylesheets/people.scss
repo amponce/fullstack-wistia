@@ -111,9 +111,8 @@ body {
 
               /* Shift right: */
               .file input[type=file] {
-                margin-left: -6.3em;
-                /* Compensate the width: */
-                width: 18.3em;
+                margin-left: -7.3em;
+                min-width: 340px;
               }
           }
 
