@@ -45,7 +45,7 @@ Rspec and Coverage: $ ``bundle exec rspec spec``
 
 ###  How the project went
 
-This app was both challenging and rewarding for me. I haven't built anything using Ruby on Rails before so I pretty much had to start from square one. I learned how to set up my envirnoment, execute rails commands, bundle gems and add models, controllers, and views. I am familiar with Python/Django and since it has a similiar MVC structure and routes, so it helped to have something to relate to. After going through this process, I am confident in using Ruby on Rails for future projects.
+This app was both challenging and rewarding for me. I haven't built anything using Ruby on Rails before so I pretty much had to start from square one. I learned how to set up my environment, execute rails commands, bundle gems and add models, controllers, and views. I am familiar with Python/Django and since it has a similar MVC structure and route system, it helped to have something to relate to. After going through this process, I am confident in using Ruby on Rails for future projects.
 
 ### Design decisions
 
@@ -53,11 +53,11 @@ I decided to add pagination to the app to be able to support scaling for unlimit
 
 ### Lessons learned
 
-Learning a new framework always takes a lot of time and research, so I knew I would have to budget my time this week accrodingly.
+Learning a new framework always takes a lot of time and research, so I knew I would have to budget my time this week accordingly.
 
 When I was setting up my environment, I ran into a problem setting up rails because of an error related to zlib. After browsing through stackoverflow, I found a simple solution that involved deleting zlib from homebrew and reinstalling it entirely because it was a bad version. After that, things finally came together.
 
-Origianlly I started down a different path by trying to import only CSV files. However, after reviewing the comp more closely, I realized that limiting the files to a specific format was not the ideal route for me to go with this. The example files provided to me were in .txt format so I decided to broaden the support for file formats with ActiveRecord import. Now the app supports multiple formats (e.g. .txt .csv and .excel).
+Originally I started down a different path by trying to import only CSV files. However, after reviewing the comp more closely, I realized that limiting the files to a specific format was not the ideal route for me to go with this. The example files provided to me were in .txt format so I decided to broaden the support for file formats with ActiveRecord import. Now the app supports multiple formats (e.g. .txt .csv and .excel).
 
 ### For next time
 
