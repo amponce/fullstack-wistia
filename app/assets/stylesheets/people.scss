@@ -73,7 +73,9 @@ body {
           .file input[type=file] {
             cursor: pointer;
             border: 0 none;
-            width: 20em;
+            min-width: 340px;
+            color:#a7a9ac;
+            font-size:13px;
           }
 
           /* -webkit hide the button: */
