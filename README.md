@@ -31,9 +31,17 @@ Rspec and Coverage: $ ``bundle exec rspec spec``
 
 ### Deployment instructions
 
-* The app is currently hosted [here](https://blooming-wildwood-69662.herokuapp.com/).
+##### The app is currently hosted [here](https://blooming-wildwood-69662.herokuapp.com/).
 
-* Deploy to heroku, follow the steps [here](https://devcenter.heroku.com/articles/getting-started-with-rails5).
+* `brew install heroku`
+* `heroku create`
+* `git config --list | grep heroku`
+* `push heroku master`
+* `heroku run rake db:migrate`
+* `heroku ps:scale web=1`
+* `heroku open`
+
+##### Need more info? Follow the steps [here](https://devcenter.heroku.com/articles/getting-started-with-rails5).
 
 ###  How the project went
 
@@ -56,7 +64,7 @@ Origianlly I started down a different path by trying to import only CSV files. H
 There are few outstanding items that I would have liked to address:
 
 * Resolve mobile issues, it's currently best viewed at desktop (currently there is a date-related display issue on iOS)
-* Add error message to indicate when a user has uploaded a duplicate file 
+* Add error message to indicate when a user has uploaded a duplicate file
 * Add test to upload a duplicate file and expect an error message
 * Add error message to indicate an invalid file
 * Add test for invalid file that expects the designated error message
