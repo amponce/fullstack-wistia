@@ -59,10 +59,13 @@ When I was setting up my environment, I ran into a problem setting up rails beca
 
 Originally I started down a different path by trying to import only CSV files. However, after reviewing the comp more closely, I realized that limiting the files to a specific format was not the ideal route for me to go with this. The example files provided to me were in .txt format so I decided to broaden the support for file formats with ActiveRecord import. Now the app supports multiple formats (e.g. .txt .csv and .excel).
 
+A big challenge for me was learning to use various types of ActiveRecord migrations for this project. I initially created my model with the :string type for each column, I planned on formating the date with JavaScript which backfired because it only worked in Chrome. I decided to try to format the date using `bin/rails generate migration ChangeDefaultBirthday birthday:datetime` at the server level, which failed because I didn't drop the `:people, :birthday` column before I tried to change the string to a datetime. I ended up blowing away my schema and rolling back to the JavaScript version that I previously had. If I had more time, I would spend it researching how `:datetime` is handled on the server side, rather than trying to fromat the string with JavaScript.
+
 ### For next time
 
 There are few outstanding items that I would have liked to address:
 
+* Birthday field needs to be revamped as a datetime so I can format the dates correctly
 * Resolve mobile issues, it's currently best viewed at desktop (currently there is a date-related display issue on iOS)
 * Add error message to indicate when a user has uploaded a duplicate file
 * Add test to upload a duplicate file and expect an error message
