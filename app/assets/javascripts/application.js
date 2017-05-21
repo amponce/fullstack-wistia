@@ -21,10 +21,15 @@ $(document).on('turbolinks:load', function() {
    $("input[name='file']").change(function(){
       this.form.submit();
   });
-  $('td.date').each(function(event) {
+  var isChrome = !!window.chrome
+  if (isChrome) {
+
+  $('td.date').each(function() {
       var dateFormat = $(this).text()
       var dateFormat = $.datepicker.formatDate('mm/dd/yy', new Date(dateFormat));
       //alert(dateFormat);
       $(this).html(dateFormat + "<br>");
+
     });
-  });
+  }
+});
