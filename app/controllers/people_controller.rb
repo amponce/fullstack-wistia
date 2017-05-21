@@ -13,7 +13,7 @@ class PeopleController < ApplicationController
 
   def import
     Person.import(params[:file].path)
-    redirect_to root_url, notice: "Person imported."
+    redirect_to root_url, notice: "File imported."
   end
 
   private
