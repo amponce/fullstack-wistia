@@ -37,7 +37,7 @@
           <% end %>
 
         </td>
-        <td class="date"><%= people.birthday.strftime("%m/%d/%Y")%></td>
+        <td class="date"><%= people.try(:birthday).try(:strftime, ("%m/%d/%y"))%></td>
         <td><%= people.color %></td>
       </tr>
     <% end %>
